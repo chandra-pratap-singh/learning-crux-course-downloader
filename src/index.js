@@ -1,9 +1,6 @@
 const puppeteer = require("puppeteer");
 const constants = require("./const.js");
 
-const URL = "https://www.learningcrux.com/course/advanced-javascript-concepts";
-const timeDelay = 10000;
-
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
@@ -18,10 +15,10 @@ const timeDelay = 10000;
   });
   console.log(videoUrls);
   for (var i = 0; i < videoUrls.length; i++) {
-    try{
+    try {
       await page.goto(videoUrls[i]);
-    }catch{}
-    console.log('Downloading Video Number - ',i, ' of ',videoUrls.length);
+    } catch {}
+    console.log("Downloading Video Number - ", i, " of ", videoUrls.length);
     await page.waitFor(constants.TIME_DELAY);
   }
 })();
