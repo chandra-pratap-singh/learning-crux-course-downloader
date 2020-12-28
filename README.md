@@ -8,6 +8,7 @@ This Project basically help to download full course from free online Learning-cr
 1. replace the TIME_DELAY with the time duration (in ms) you want between each download. By default it's 10sec, 
 which simply means that start downloading one video and then wait for 10sec then also start downloading then next video.
 Like this - `TIME_DELAY: 10000`
-1. Once every thing is configured simply run `npm start`
+1. Once every thing is configured simply run `npm i` to install all the dependencies  
+1. Run `npm start` tp launch the scrpit
 
 The videos will be downloaded in the downloads folder.
